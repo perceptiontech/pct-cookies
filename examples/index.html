@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>PCT Cookies</title>
+
+        <!-- Bootstrap css example -->
+        <link type="text/plain" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"
+              data-type="text/css"
+              data-name="bootstrap"
+              data-default="true"
+              data-title="Bootstrap styles"
+              data-purposes="[analitycs]"
+              data-required="false"
+        >
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+            <div class="py-5 text-center">
+                <h1>PCT Cookies Example</h1>
+                <br>
+                <p class="lead">
+                    This is a simple example that shows how to embed PCT Cookies in your own JS
+                    app.
+                    <br><br>
+                    <small>
+                        Normally only your script has access to PCT Cookies, here we explicitly
+                        assign it to the "window" object inside "index.js" so that we can show
+                        the manager, which would usually be done by your app.
+                    </small>
+                </p>
+                DOCS
+                <br>
+                npm i --g perceptiontech/pct-cookies
+                <br>
+                Include
+                <pre>
+                    < script defer type="text/javascript" src="../dist/js/pct-cookies.js" >< / script >
+                </pre>
+                in html head
+            </div>
+        </div>
+
+        <script>
+            var pctCookiesCallback = {};
+
+            pctCookiesCallback.bootstrap = function (consent, service) {
+                console.log(
+                    'User consent for service ' + service.name + ': consent=' + consent
+                );
+            }
+        </script>
+        <script
+                type="text/javascript"
+                src="../dist/js/pct-cookies.js"
+                id="pctCookiesConfig"
+                data-accept-all="true"
+                data-cookie-expires-after-days="34"
+        >
+        </script>
+        <script defer type="text/javascript" src="../node_modules/klaro/dist/klaro.js"></script>
+    </body>
+</html>
