@@ -1,11 +1,18 @@
 {
-  "name": "pct-cookies",
+  "name": "@perceptiontech/pct-cookies",
   "version": "1.0.0",
   "description": "",
   "main": "dist/js/pct-cookies.js",
   "umd:main": "dist/js/pct-cookies.umd.js",
   "module": "dist/js/pct-cookies.mjs",
   "source": "src/js/pct-cookies.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perceptiontech/pct-cookies"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/perceptiontech"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "microbundle",
