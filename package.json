@@ -1,8 +1,16 @@
 {
   "name": "@perceptiontech/pct-cookies",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/js/pct-cookies.js",
+  "browserslist": [
+    "> 0.25%",
+    "IE 11",
+    "IE 9"
+  ],
+  "description": "A simple but powerful consent manager based in Klaro!",
+  "bugs": {
+    "url": "https://github.com/perceptiontech/pct-cookies/issues"
+  },
+  "main": "./dist/js/pct-cookies.js",
   "umd:main": "dist/js/pct-cookies.umd.js",
   "module": "dist/js/pct-cookies.mjs",
   "source": "src/js/pct-cookies.js",
@@ -15,16 +23,21 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "microbundle",
+    "copy": "cp -R src/i18n dist/",
+    "build": "microbundle && npm run copy",
     "prepublish": "npm run build"
   },
   "keywords": [
-    "cookies"
+    "cookie",
+    "consent",
+    "gdpr",
+    "compliance"
   ],
+  "homepage": "https://www.perception.es/",
   "author": "David Anglada",
   "license": "ISC",
   "dependencies": {
-    "klaro": "^0.7.4"
+    "klaro": "^0.7.10"
   },
   "devDependencies": {
     "microbundle": "^0.12.4"
