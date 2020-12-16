@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="ca">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <title>PCT Cookies</title>
@@ -11,7 +11,7 @@
               data-name="bootstrap"
               data-default="true"
               data-title="Bootstrap styles"
-              data-purposes="[analitycs]"
+              data-purposes="[analytics,styling]"
               data-required="false"
         >
     </head>
@@ -43,6 +43,7 @@
             </div>
         </div>
 
+        <!-- Example 'bootstrap' callback with boolean consent parameter -->
         <script>
             var pctCookiesCallback = {};
 
@@ -52,14 +53,23 @@
                 );
             }
         </script>
+
+        <!-- Main pct cookies script (Important: Add id pctCookiesConfig attribute) -->
         <script
                 type="text/javascript"
                 src="../dist/js/pct-cookies.js"
                 id="pctCookiesConfig"
                 data-accept-all="true"
                 data-cookie-expires-after-days="34"
+                data-privacy-policy="https://www.google.es/"
         >
         </script>
+
+        <!-- Translations for this site -->
+        <script type="text/javascript" src="../dist/i18n/ca.js"></script>
+        <script type="text/javascript" src="../dist/i18n/es.js"></script>
+
+        <!-- Original Klaro! plugin script -->
         <script defer type="text/javascript" src="../node_modules/klaro/dist/klaro.js"></script>
     </body>
 </html>
