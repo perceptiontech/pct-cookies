@@ -6,7 +6,7 @@
 
 PCT Cookies is also available as a Node.js module via npm:
 
-`npm install perceptiontech/pct-cookies`
+`npm install @perceptiontech/pct-cookies`
 
 ## **Getting started**
 
