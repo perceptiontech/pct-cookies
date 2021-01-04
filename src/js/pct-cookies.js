@@ -5,12 +5,12 @@ let pctCookies = {
     },
     initConfig: function() {
         var me = this;
-        let pctCookiesConfig = document.querySelector("#pctCookiesConfig");
+        let pctCookiesConfigScript = document.querySelector("#pctCookiesConfig");
 
-        if (pctCookiesConfig !== null) {
-            Object.keys(pctCookiesConfig.dataset).forEach(function (attribute) {
-                let value = pctCookiesConfig.dataset[attribute];
-                klaroConfig[attribute] = me.setValueWithType(value);
+        if (pctCookiesConfigScript !== null) {
+            Object.keys(pctCookiesConfigScript.dataset).forEach(function (attribute) {
+                let value = pctCookiesConfigScript.dataset[attribute];
+                pctCookiesConfig[attribute] = me.setValueWithType(value);
             });
         }
     },
@@ -19,7 +19,7 @@ let pctCookies = {
         let pctCookiesServices = document.querySelectorAll('link[type="text/plain"], script[type="text/plain"]');
 
         if (pctCookiesServices.length > 0) {
-            klaroConfig.services = [];
+            pctCookiesConfig.services = [];
 
             pctCookiesServices.forEach(function (element) {
                 let service = {};
@@ -30,7 +30,7 @@ let pctCookies = {
                 if (typeof pctCookiesCallback !== 'undefined' && typeof pctCookiesCallback[service.name] === 'function') {
                     service.callback = pctCookiesCallback[service.name];
                 }
-                klaroConfig.services.push(service);
+                pctCookiesConfig.services.push(service);
             });
         }
     },
@@ -50,7 +50,7 @@ let pctCookies = {
     }
 };
 
-klaroConfig = {
+pctCookiesConfig = {
     // You can customize the ID of the DIV element that Klaro will create
     // when starting up. If undefined, Klaro will use 'klaro'.
     elementID: 'pctCookies',
@@ -116,7 +116,7 @@ klaroConfig = {
 
 // Example config that shows how to overwrite translations:
 // https://github.com/KIProtect/klaro/blob/master/src/configs/i18n.js
-klaroConfig.translations = {
+pctCookiesConfig.translations = {
 
 };
 

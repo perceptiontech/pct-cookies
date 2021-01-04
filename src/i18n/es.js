@@ -1,7 +1,7 @@
 
 // Example config that shows how to overwrite translations:
 // https://github.com/kiprotect/klaro/blob/master/src/translations/es.yml
-klaroConfig.translations.es = {
+pctCookiesConfig.translations.es = {
     consentModal: {
         title: 'Cookies que se utilizan en esta web',
         description: 'Aquí puede ver y personalizar las cookies que utilizamos en esta web.'
