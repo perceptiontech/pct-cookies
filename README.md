@@ -30,29 +30,29 @@ The execution order of each javascript is important, do not change this order.
 ## **Customize plugin**
 
 To customize the plugin you can put the following data attributes in the script with the id "pctCookiesConfig":
-- **`data-testing='false'`** Setting `data-testing` to `true` will cause Klaro to not show the consent notice or
+- **`data-testing='false'`** Setting `data-testing` to `true` will cause PCT Cookies to not show the consent notice or
                              modal by default, except if a special hash tag is appended to the URL (#klaro-
-                             testing). This makes it possible to test Klaro on your live website without
+                             testing). This makes it possible to test PCT Cookies on your live website without
                              affecting normal visitors.
                            
-- **`data-storage-method='cookie'`** You can customize how Klaro persists consent information in the browser. Specify
+- **`data-storage-method='cookie'`** You can customize how PCT Cookies persists consent information in the browser. Specify
                                      either `cookie` (the default) or `localStorage`.
                                    
-- **`data-html-texts='false'`** If set to `true`, Klaro will render the texts given in the
+- **`data-html-texts='false'`** If set to `true`, PCT Cookies will render the texts given in the
                                 `consentModal.description` and `consentNotice.description` translations as HTML.
                                 This enables you to e.g. add custom links or interactive content.
                                                            
 - **`data-cookie-domain='.example.com'`** You can change the cookie domain for the consent manager itself. Use this if you
-                                          want to get consent once for multiple matching domains. By default, Klaro will
+                                          want to get consent once for multiple matching domains. By default, PCT Cookies will
                                           use the current domain. Only relevant if `data-storage-method` is set to `cookie`.
 
-- **`data-cookie-expires-after-days='365'`** You can also set a custom expiration time for the Klaro cookie. By default, it
+- **`data-cookie-expires-after-days='365'`** You can also set a custom expiration time for the PCT Cookies cookie. By default, it
                                              will expire after 30 days. Only relevant if `data-storage-method` is set to `cookie`.
 
 - **`data-default='false'`** Defines the default state for services in the consent modal (`true` = enabled by
                              default). You can override this setting in each service.
 
-- **`data-must-consent='false'`** If `mustConsent` is set to `true`, Klaro will directly display the consent
+- **`data-must-consent='false'`** If `mustConsent` is set to `true`, PCT Cookies will directly display the consent
                                   manager modal and not allow the user to close it before having actively
                                   consented or declined the use of third-party services.
 
@@ -87,7 +87,7 @@ To customize the plugin you can put the following data attributes in the script 
 </script>
 ```
 
-## **Add cookies**
+## **Add cookie**
 
 Change the `type` attribute of each `<script>` or `<link>` to `text/plain` and add the `data-type` attribute with the original type.
 
