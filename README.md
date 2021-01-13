@@ -16,15 +16,15 @@ The execution order of each javascript is important, do not change this order.
 
 ```html
 <!-- Main pct cookies script (Important: Add pctCookiesConfig id attribute) -->
-<script id="pctCookiesConfig" type="text/javascript" src="node_modules/pct-cookies/dist/js/pct-cookies.js"></script>
+<script id="pctCookiesConfig" type="application/javascript" src="node_modules/pct-cookies/dist/js/pct-cookies.js"></script>
 
 <!-- Translations for the site -->
-<script type="text/javascript" src="node_modules/pct-cookies/dist/i18n/ca.js"></script>
-<script type="text/javascript" src="node_modules/pct-cookies/dist/i18n/es.js"></script>
-<script type="text/javascript" src="node_modules/pct-cookies/dist/i18n/en.js"></script>
+<script type="application/javascript" src="node_modules/pct-cookies/dist/i18n/ca.js"></script>
+<script type="application/javascript" src="node_modules/pct-cookies/dist/i18n/es.js"></script>
+<script type="application/javascript" src="node_modules/pct-cookies/dist/i18n/en.js"></script>
 
 <!-- Original Klaro! plugin script -->
-<script defer type="text/javascript" src="node_modules/klaro/dist/klaro.js"></script>
+<script defer type="application/javascript" data-klaro-config="pctCookiesConfig" src="node_modules/klaro/dist/klaro.js"></script>
 ```
 
 ## **Customize plugin**
@@ -78,7 +78,7 @@ To customize the plugin you can put the following data attributes in the script 
 <!-- PCT Cookies with  -->
 <script
     id="pctCookiesConfig"
-    type="text/javascript"
+    type="application/javascript"
     src="node_modules/pct-cookies/dist/js/pct-cookies.js"
     data-accept-all="true"
     data-cookie-expires-after-days="365"
@@ -146,5 +146,5 @@ If the website has the language iso code 'es':
 
 ```html
 <!-- Translations for the site -->
-<script type="text/javascript" src="node_modules/pct-cookies/dist/i18n/es.js"></script>
+<script type="application/javascript" src="node_modules/pct-cookies/dist/i18n/es.js"></script>
 ```
